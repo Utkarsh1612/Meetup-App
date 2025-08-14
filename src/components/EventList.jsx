@@ -76,7 +76,7 @@ const EventList = ({ searchTerm }) => {
                     alt="event-photo"
                   />
                   <div className="card-body">
-                    <div className="d-flex justify-content-between mb-3">
+                    <div className="d-flex flex-column flex-xxl-row justify-content-between mb-3">
                       <p>
                         <small>
                           {event.eventDate} • {event.startTime} IST

@@ -40,11 +40,11 @@ const EventDetails = () => {
                   {data.additionalInfo.ageRestrictions}
                 </p>
                 <h3>Event Tags:</h3>
-                <div className="mt-4 mb-5">
+                <div className="d-flex flex-column flex-sm-row mt-4 mb-5">
                   {data.eventTags.map((tag) => (
-                    <span className="bg-danger p-3 me-3 rounded text-white">
+                    <div className="bg-danger p-3 me-3 rounded text-white mb-2">
                       {tag}
-                    </span>
+                    </div>
                   ))}
                 </div>
               </div>
