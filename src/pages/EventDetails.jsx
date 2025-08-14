@@ -49,45 +49,49 @@ const EventDetails = () => {
                 </div>
               </div>
               <div className="col-md-6 mt-4">
-                <div className="card" style={{ width: "320px" }}>
-                  <div className="card-body">
-                    <div className="d-flex">
-                      <span className="me-2">🕜</span>
-                      <p>
-                        {data.eventDate} at {data.startTime} to {data.eventDate}{" "}
-                        at {data.endTime}
-                      </p>
-                    </div>
-                    <div className="d-flex">
-                      <span className="me-2 ms-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          className="bi bi-geo-alt-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                        </svg>
-                      </span>
-                      <p>{data.address}</p>
-                    </div>
-                    <div className="d-flex">
-                      <span className="me-2 ms-2">
-                        <strong>₹</strong>
-                      </span>
-                      <p>{data.ticketPrice}</p>
+                <div className="d-flex justify-content-center justify-content-md-start">
+                  <div className="card" style={{ width: "320px" }}>
+                    <div className="card-body">
+                      <div className="d-flex">
+                        <span className="me-2">🕜</span>
+                        <p>
+                          {data.eventDate} at {data.startTime} to{" "}
+                          {data.eventDate} at {data.endTime}
+                        </p>
+                      </div>
+                      <div className="d-flex">
+                        <span className="me-2 ms-1">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            className="bi bi-geo-alt-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                          </svg>
+                        </span>
+                        <p>{data.address}</p>
+                      </div>
+                      <div className="d-flex">
+                        <span className="me-2 ms-2">
+                          <strong>₹</strong>
+                        </span>
+                        <p>{data.ticketPrice}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="mt-5">
-                  <h3>Speakers:({data.speakers.length})</h3>
-                  <div className="row">
+                  <h3 className="text-center text-md-start">
+                    Speakers:({data.speakers.length})
+                  </h3>
+                  <div className="d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
                     {data.speakers.map((speaker) => (
-                      <div className="col-md-4">
+                      <div className="">
                         <div
-                          className="card text-center"
+                          className="card text-center mb-3 mb-md-0 mr-4"
                           style={{ width: "200px" }}
                         >
                           <img

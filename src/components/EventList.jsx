@@ -15,7 +15,7 @@ const EventList = ({ searchTerm }) => {
         const search = searchTerm.toLowerCase();
         const title = event.title.toLowerCase();
         const tags = event.eventTags.map((tag) => tag.toLowerCase());
-        return title.includes(search) || tags.join("").includes(search);
+        return title.includes(search) || tags.join(", ").includes(search);
       });
       setFilteredEvents(searchResult);
       if (searchTerm === "") {
