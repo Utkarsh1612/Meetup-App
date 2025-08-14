@@ -11,10 +11,12 @@ const EventList = ({ searchTerm }) => {
 
   useEffect(() => {
     if (data) {
-      const searchResult = data.filter(
-        (event) =>
-          event.title === searchTerm || event.eventTags.includes(searchTerm)
-      );
+      const searchResult = data.filter((event) => {
+        const search = searchTerm.toLowerCase();
+        const title = event.title.toLowerCase();
+        const tags = event.eventTags.map((tag) => tag.toLowerCase());
+        return title.includes(search) || tags.join("").includes(search);
+      });
       setFilteredEvents(searchResult);
       if (searchTerm === "") {
         handleTypeSelect(type);

@@ -7,7 +7,6 @@ const EventDetails = () => {
   const { data, loading, error } = useFetch(
     `https://meetup-beckend.vercel.app/eventdetails/${eventId}`
   );
-  console.log(data);
   return (
     <div className="bg-body-tertiary">
       <Header />
