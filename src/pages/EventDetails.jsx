@@ -48,7 +48,7 @@ const EventDetails = () => {
                   ))}
                 </div>
               </div>
-              <div className="col-md-6 mt-4">
+              <div className="col-md-6 mt-md-4">
                 <div className="d-flex justify-content-center justify-content-md-start">
                   <div className="card" style={{ width: "320px" }}>
                     <div className="card-body">
